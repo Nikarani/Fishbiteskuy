@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-</resources>
+    <color name="kuning">#FFD557</color>
+    <color name="ijo">#6C9AA4</color>
+    <color name="putlang">#A1A2A4</color>
+    <color name="butek">#D6D7D9</color>
+></resources>
