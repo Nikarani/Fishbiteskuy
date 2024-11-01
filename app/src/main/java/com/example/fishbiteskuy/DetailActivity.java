@@ -7,28 +7,31 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class DetailActivity extends AppCompatActivity {
 
-    private TextView tvDetailTitle;
-    private TextView tvDetailContent;
-    private ImageView imageViewDetail;
+    private TextView titleTextView; // Tambahkan TextView untuk judul berita
+    private ImageView imageView; // ImageView untuk menampilkan gambar
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail); // Pastikan layout ini ada di folder res/layout
+        setContentView(R.layout.activity_detail); // Pastikan layout ini sesuai
 
-        // Inisialisasi elemen UI
-        tvDetailTitle = findViewById(R.id.tvDetailTitle);
-        tvDetailContent = findViewById(R.id.tvDetailContent);
-        imageViewDetail = findViewById(R.id.imageViewDetail);
+        TextView titleTextView = null; // Deklarasi untuk TextView judul
+        ImageView imageView = null; // Deklarasi untuk ImageView
 
-        // Dapatkan data dari Intent
-        String title = getIntent().getStringExtra("TITLE");
-        String content = getIntent().getStringExtra("CONTENT");
-        int imageResource = getIntent().getIntExtra("IMAGE_RESOURCE", R.drawable.default_image); // Gambar default
+        // Ambil data dari Intent
+        int newsId = getIntent().getIntExtra("newsId", -1); // Ambil ID berita
+        int imageResource = getIntent().getIntExtra("IMAGE_RESOURCE", R.drawable.katalog); // Gambar default
 
-        // Set data ke elemen UI
-        tvDetailTitle.setText(title);
-        tvDetailContent.setText(content);
-        imageViewDetail.setImageResource(imageResource);
+        // Set gambar di ImageView
+        imageView.setImageResource(imageResource);
+
+        // Anda dapat menambahkan logika lain berdasarkan ID berita
+        if (newsId == 1) {
+            titleTextView.setText("Judul Berita Pertama");
+            // Set konten berita pertama
+        } else if (newsId == 2) {
+            titleTextView.setText("Judul Berita Kedua");
+            // Set konten berita kedua
+        }
     }
 }

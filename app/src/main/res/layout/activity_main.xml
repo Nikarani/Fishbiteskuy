@@ -2,27 +2,19 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
-
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
-        tools:context="com.example.apkk.MainActivity">
-
+        android:background="@color/white">
 
         <!-- Bagian konten yang bisa di-scroll -->
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="fill_vertical"
             android:layout_marginBottom="56dp">
 
             <LinearLayout
@@ -30,8 +22,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="16dp">
-
-                <!-- Konten utama kamu di sini (seperti pada kode yang telah kamu buat sebelumnya) -->
 
                 <!-- Section Welcome -->
                 <LinearLayout
@@ -62,7 +52,7 @@
                         android:id="@+id/iconProfile"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/profile" />
+                        android:src="@drawable/akun" />
 
                 </LinearLayout>
 
@@ -81,10 +71,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Search"
-                    android:drawableStart="@drawable/Searchh"
+                    android:drawableStart="@drawable/search"
+                    android:gravity="center"
                     android:padding="12dp"
                     android:background="@drawable/top_bg"
                     android:layout_marginTop="16dp" />
+
                 <!-- Section Kategori -->
                 <TextView
                     android:layout_width="wrap_content"
@@ -183,7 +175,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Pembibtan Ikan"
+                            android:text="Pembibitan Ikan"
                             android:textSize="12sp"
                             android:gravity="center"
                             android:layout_marginTop="4dp" />
@@ -238,7 +230,7 @@
                                 android:backgroundTint="@color/kuning"
                                 android:textSize="12sp"
                                 android:layout_gravity="start"
-                                android:layout_marginTop="4dp"/>
+                                android:layout_marginTop="4dp" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -269,7 +261,6 @@
                                 android:textSize="16sp" />
 
                             <Button
-
                                 android:id="@+id/lihatSelengkapnya2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -277,7 +268,7 @@
                                 android:backgroundTint="@color/kuning"
                                 android:textSize="12sp"
                                 android:layout_gravity="start"
-                                android:layout_marginTop="4dp"/>
+                                android:layout_marginTop="4dp" />
                         </LinearLayout>
 
                     </LinearLayout>

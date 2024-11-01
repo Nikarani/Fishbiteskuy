@@ -1,24 +1,16 @@
 pluginManagement {
     repositories {
-        google {
-            content {
-                includeGroupByRegex("com\\.android.*")
-                includeGroupByRegex("com\\.google.*")
-                includeGroupByRegex("androidx.*")
-            }
-        }
-        mavenCentral()
-        gradlePluginPortal()
-    }
-}
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
+        google() // Repositori untuk plugin Google
+        mavenCentral() // Repositori Maven pusat
     }
 }
 
-rootProject.name = "Fishbiteskuy"
-include(":app")
- 
+dependencyResolutionManagement {
+    repositories {
+        google() // Repositori untuk library dari Google
+        mavenCentral() // Repositori Maven pusat untuk library lainnya
+    }
+}
+
+rootProject.name = "Fishbiteskuy" // Ganti dengan nama proyek Anda
+include(":app") // Menyertakan modul aplikasi utama

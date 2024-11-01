@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "761715863471",
+    "project_id": "fishbiteskuy",
+    "storage_bucket": "fishbiteskuy.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761715863471:android:a8449e46fc6b54f554095a",
+        "android_client_info": {
+          "package_name": "com.example.fishbiteskuy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTWBC2tdd70ESHEQG95RGXA8HVSHV-9SA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

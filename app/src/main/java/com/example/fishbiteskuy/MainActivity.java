@@ -1,15 +1,5 @@
 package com.example.fishbiteskuy;
 
-import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
-
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,9 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.widget.NestedScrollView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,21 +31,26 @@ public class MainActivity extends AppCompatActivity {
         iconCart = findViewById(R.id.iconCart);
         iconProfile = findViewById(R.id.iconProfile);
 
-        // Set event listener untuk tombol "Lihat Selengkapnya"
+        // Set event listener untuk tombol "Lihat Selengkapnya" pertama
         lihatSelengkapnya1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Aksi ketika tombol "Lihat selengkapnya" pertama ditekan
                 Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                intent.putExtra("newsId", 1); // Kirim ID berita pertama
+                intent.putExtra("IMAGE_RESOURCE", R.drawable.berita1); // Kirim gambar untuk berita pertama
                 startActivity(intent);
             }
         });
 
+        // Set event listener untuk tombol "Lihat Selengkapnya" kedua
         lihatSelengkapnya2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Aksi ketika tombol "Lihat selengkapnya" kedua ditekan
                 Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                intent.putExtra("newsId", 2); // Kirim ID berita kedua
+                intent.putExtra("IMAGE_RESOURCE", R.drawable.berita2); // Kirim gambar untuk berita kedua
                 startActivity(intent);
             }
         });
@@ -81,7 +74,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        // Anda dapat menambahkan lebih banyak fungsionalitas sesuai kebutuhan
     }
 }
