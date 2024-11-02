@@ -1,63 +1,56 @@
 package com.example.fishbiteskuy;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.firebase.auth.AuthResult; // Impor AuthResult
-import com.google.firebase.auth.FirebaseAuth; // Impor FirebaseAuth
-import com.google.firebase.auth.FirebaseUser; // Impor FirebaseUser
-import com.google.android.gms.tasks.OnCompleteListener; // Impor OnCompleteListener
-import com.google.android.gms.tasks.Task; // Impor Task
-
 
 public class LoginActivity extends AppCompatActivity {
 
-    private FirebaseAuth auth; // Deklarasi variabel FirebaseAuth
-    private EditText username; // EditText untuk username
-    private EditText password; // EditText untuk password
-    private Button loginButton; // Button untuk login
+
+    private EditText usernameEditText;
+    private EditText passwordEditText;
+    private Button login;
+    private Button signup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login); // Mengatur layout untuk activity ini
+        Compiler EdgeToEdge = null;
+        EdgeToEdge.enable();
+        setContentView(R.layout.activity_login);
 
-        // Menginisialisasi FirebaseAuth
-        auth = FirebaseAuth.getInstance();
+        usernameEditText = findViewById(R.id.username);
+        passwordEditText = findViewById(R.id.password);
+        login = findViewById(R.id.loginButton);
+        signup = findViewById(R.id.SignButton);
 
-        // Mengaitkan EditText dan Button dengan ID di layout
-        username = findViewById(R.id.username); // Pastikan ID sesuai dengan layout Anda
-        password = findViewById(R.id.password); // Pastikan ID sesuai dengan layout Anda
-        loginButton = findViewById(R.id.loginButton); // Pastikan ID sesuai dengan layout Anda
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String username = usernameEditText.getText().toString();
+                String password = passwordEditText.getText().toString();
 
-        // Mengatur klik pada tombol login
-        loginButton.setOnClickListener(v -> {
-            String email = username.getText().toString(); // Mendapatkan input dari EditText username
-            String pass = password.getText().toString(); // Mendapatkan input dari EditText password
-            login(email, pass); // Memanggil fungsi login dengan email dan password
+                if (username.isEmpty() || password.isEmpty()) {
+                    Toast.makeText(LoginActivity.this, "Isi username dan password", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(LoginActivity.this, "login sukses", Toast.LENGTH_SHORT).show();
+                }
+            }
         });
-    }
 
-    private void login(String email, String password) {
-        auth.signInWithEmailAndPassword(email, password) // Menggunakan Firebase untuk autentikasi
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Login sukses
-                            Toast.makeText(LoginActivity.this, "Login berhasil", Toast.LENGTH_SHORT).show();
-                            FirebaseUser user = auth.getCurrentUser(); // Mendapatkan user yang sedang login
-                            // Lanjutkan ke activity berikutnya jika perlu
-                        } else {
-                            // Login gagal
-                            Toast.makeText(LoginActivity.this, "Login gagal: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(LoginActivity.this, SignupActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

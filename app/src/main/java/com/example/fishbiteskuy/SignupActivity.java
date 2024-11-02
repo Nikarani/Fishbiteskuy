@@ -1,4 +1,4 @@
 package com.example.fishbiteskuy;
 
-public class SingupActivity {
+public class SignupActivity {
 }

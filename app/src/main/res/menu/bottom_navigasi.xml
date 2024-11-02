@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/home"
-        android:title="Home" />
+        android:icon="@drawable/button_home"
+        android:title="Home" /> <!-- Tambahkan title -->
 
     <item
         android:id="@+id/navigation_katalog"
         android:icon="@drawable/katalog"
-        android:title="Katalog" />
+        android:title="Katalog" /> <!-- Tambahkan title -->
 
     <item
         android:id="@+id/navigation_artikel"
         android:icon="@drawable/artikel"
-        android:title="Artikel" />
+        android:title="Artikel" /> <!-- Tambahkan title -->
 
     <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/profile"
-        android:title="Profile" />
+        android:title="Profil" /> <!-- Tambahkan title -->
 
 </menu>

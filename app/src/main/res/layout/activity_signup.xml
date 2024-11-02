@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SingupActivity"
+    tools:context=".SignupActivity"
     android:background="@color/white">
 
     <ImageView
@@ -25,8 +25,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create Account"
-        android:textColor="@color/kuning"
-        android:fontFamily="@font/readex_boldd"
+        android:textColor="@color/yellow"
+        android:fontFamily="@font/font"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -99,9 +99,9 @@
         android:id="@+id/loginButton"
         android:layout_width="280dp"
         android:layout_height="45dp"
-        android:backgroundTint="@color/kuning"
+        android:backgroundTint="@color/yellow"
         android:text="Sign Up"
-        android:fontFamily="@font/readex_boldd"
+        android:fontFamily="@font/font"
         android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"

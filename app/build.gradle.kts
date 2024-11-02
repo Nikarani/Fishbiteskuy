@@ -1,10 +1,11 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.gms.google-services") // Google Services Plugin
 }
 
 android {
-    compileSdk = 34 // Ganti dengan versi SDK yang sesuai
+    compileSdk = 34 // Versi SDK yang sesuai
 
     namespace = "com.example.fishbiteskuy" // Namespace
 
@@ -17,21 +18,23 @@ android {
     }
 
     buildTypes {
-        getByName("release") {
-            isMinifyEnabled = false // Gunakan ProGuard atau R8 jika diperlukan
+        release {
+            isMinifyEnabled = false // ProGuard atau R8 jika diperlukan
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
 }
 
 dependencies {
-    implementation("com.google.firebase:firebase-auth-ktx:24.3.1") // Firebase Authentication
-    implementation("com.google.firebase:firebase-firestore-ktx:24.3.1") // Firebase Firestore
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4") // ConstraintLayout
-    implementation("com.google.gms:google-services:4.3.15")
-    implementation(libs.appcompat)
-    implementation(libs.firebase.auth) // Google Services
-}
+    // AndroidX Libraries
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("androidx.appcompat:appcompat:1.6.1") // Ganti dengan versi terbaru jika perlu
+    implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0") // Ganti dengan versi terbaru jika perlu
 
-// Pastikan untuk menambahkan Google Services ke dalam file build.gradle proyek (root) Anda
-// classpath("com.google.gms:google-services:4.3.15")
+    // Material Design Components
+    implementation("com.google.android.material:material:1.8.0") // Ganti dengan versi terbaru jika perlu
+
+    // Dependency Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+}
