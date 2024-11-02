@@ -1,10 +1,10 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-    // Apply the Android application plugin
+    // Mendeklarasikan plugin Android untuk aplikasi
     alias(libs.plugins.android.application) apply false
-    // Apply the Kotlin plugin
-    id("org.jetbrains.kotlin.android") version "1.8.10" apply false // Ganti dengan versi terbaru
-    // Apply the Google Services plugin
+    // Menambahkan plugin Kotlin untuk Android
+    id("org.jetbrains.kotlin.android") version "1.8.10" apply false
+    // Menambahkan plugin Google Services untuk Firebase dan lainnya
     id("com.google.gms.google-services") version "4.4.2" apply false
 }
 

@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Aksi ketika ikon keranjang ditekan
-                Intent intent = new Intent(MainActivity.this, CartActivity.class);
+                Intent intent = new Intent(MainActivity.this, artActivity.class);
                 startActivity(intent);
             }
         });
