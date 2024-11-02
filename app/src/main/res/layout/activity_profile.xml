@@ -11,6 +11,6 @@
         android:textSize="24sp"
         android:layout_centerInParent="true"/>
 
-    <!-- Anda bisa menambahkan elemen UI lain di sini sesuai kebutuhan -->
+
 
 </RelativeLayout>
