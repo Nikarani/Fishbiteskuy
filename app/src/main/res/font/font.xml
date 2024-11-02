@@ -7,4 +7,18 @@
 
     </font>
 
+    <font
+        android:font="@font/readexpro_light"
+        android:fontStyle="normal"
+        android:fontWeight="900">
+
+    </font>
+
+    <font
+    android:font="@font/readexpro_medium"
+    android:fontStyle="normal"
+    android:fontWeight="900">
+
+</font>
+
 </font-family>
