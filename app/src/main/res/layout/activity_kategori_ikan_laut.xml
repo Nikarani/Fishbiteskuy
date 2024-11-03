@@ -394,7 +394,7 @@
                 android:layout_marginTop="-177dp"
                 android:layout_marginStart="40dp"
                 android:background="@android:color/transparent"
-                app:srcCompat="@drawable/ikan_kakap" />
+                app:srcCompat="@drawable/ikan_lele" />
 
             <TextView
                 android:id="@+id/textView13"
@@ -404,7 +404,7 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="-1dp"
                 android:fontFamily="@font/readexpro_medium"
-                android:text="Ikan Kakap" />
+                android:text="Ikan Lele" />
 
             <TextView
                 android:id="@+id/textView14"
@@ -454,7 +454,7 @@
                 android:layout_marginStart="220dp"
                 android:layout_marginTop="-177dp"
                 android:background="@android:color/transparent"
-                app:srcCompat="@drawable/ikan_bandeng" />
+                app:srcCompat="@drawable/ikan_emas" />
 
             <TextView
                 android:id="@+id/textView15"
@@ -464,7 +464,7 @@
                 android:layout_marginStart="220dp"
                 android:layout_marginTop="-1dp"
                 android:fontFamily="@font/readexpro_medium"
-                android:text="Ikan Bandeng" />
+                android:text="Ikan Emas" />
 
             <TextView
                 android:id="@+id/textView16"
@@ -474,7 +474,7 @@
                 android:layout_marginStart="220dp"
                 android:layout_marginTop="-3dp"
                 android:fontFamily="@font/readexpro_light"
-                android:text="Rp 25.000/kg"
+                android:text="Rp 45.000/kg"
                 android:textSize="12sp" />
 
             <ImageButton
