@@ -5,10 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".kategori"
-    tools:layout_editor_absoluteX="9dp"
-    tools:layout_editor_absoluteY="0dp">
-
+    tools:context=".KategoriIkanTawar">
 
     <ImageButton
         android:id="@+id/imageButton2"
@@ -79,7 +76,7 @@
                     android:background="@android:color/transparent"
                     android:contentDescription="bg air tawar"
                     android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/bg_kategoriikan" />
+                    app:srcCompat="@drawable/hover_kategori" />
 
                 <!-- Gambar Ikan di atas background -->
                 <ImageButton
@@ -278,7 +275,7 @@
             android:layout_marginTop="-177dp"
             android:layout_marginStart="40dp"
             android:background="@android:color/transparent"
-            app:srcCompat="@drawable/ikan_nila" />
+            app:srcCompat="@drawable/ikan_gurame" />
 
         <TextView
             android:id="@+id/textView8"
@@ -288,7 +285,7 @@
             android:layout_marginStart="40dp"
             android:layout_marginTop="-1dp"
             android:fontFamily="@font/readexpro_medium"
-            android:text="Ikan Nila" />
+            android:text="Ikan Gurame" />
 
         <TextView
             android:id="@+id/textView10"
@@ -337,7 +334,7 @@
             android:layout_marginTop="-177dp"
             android:layout_marginStart="220dp"
             android:background="@android:color/transparent"
-            app:srcCompat="@drawable/ikan_gurame" />
+            app:srcCompat="@drawable/ikan_nila" />
 
         <TextView
             android:id="@+id/textView11"
@@ -347,7 +344,7 @@
             android:layout_marginStart="220dp"
             android:layout_marginTop="-1dp"
             android:fontFamily="@font/readexpro_medium"
-            android:text="Ikan Gurame" />
+            android:text="Ikan Nila" />
 
         <TextView
             android:id="@+id/textView12"
@@ -397,7 +394,7 @@
             android:layout_marginTop="-177dp"
             android:layout_marginStart="40dp"
             android:background="@android:color/transparent"
-            app:srcCompat="@drawable/ikan_emas" />
+            app:srcCompat="@drawable/ikan_lele" />
 
         <TextView
             android:id="@+id/textView13"
@@ -407,7 +404,7 @@
             android:layout_marginStart="40dp"
             android:layout_marginTop="-1dp"
             android:fontFamily="@font/readexpro_medium"
-            android:text="Ikan Emas" />
+            android:text="Ikan Lele" />
 
         <TextView
             android:id="@+id/textView14"
@@ -457,7 +454,7 @@
                 android:layout_marginStart="220dp"
                 android:layout_marginTop="-177dp"
                 android:background="@android:color/transparent"
-                app:srcCompat="@drawable/ikan_tuna" />
+                app:srcCompat="@drawable/ikan_emas" />
 
             <TextView
                 android:id="@+id/textView15"
@@ -467,7 +464,7 @@
                 android:layout_marginStart="220dp"
                 android:layout_marginTop="-1dp"
                 android:fontFamily="@font/readexpro_medium"
-                android:text="Ikan Tuna" />
+                android:text="Ikan Emas" />
 
             <TextView
                 android:id="@+id/textView16"
@@ -493,7 +490,5 @@
                 app:layout_below="@id/textView16" />
         </RelativeLayout>
     </RelativeLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
