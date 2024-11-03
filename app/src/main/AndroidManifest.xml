@@ -16,9 +16,6 @@
             android:name=".KategoriPembibitan"
             android:exported="false" />
         <activity
-            android:name=".Pembibitan"
-            android:exported="false" />
-        <activity
             android:name=".PakanIkan"
             android:exported="false" />
         <activity
