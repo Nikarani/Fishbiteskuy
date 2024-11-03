@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         // Inisialisasi elemen UI
         tvHelloCasie = findViewById(R.id.tvHelloCasie);
         tvWelcomeCasie = findViewById(R.id.tvWelcomeCasie);
-        searchBar = findViewById(R.id.searchBar);
         lihatSelengkapnya1 = findViewById(R.id.lihatSelengkapnya1);
         lihatSelengkapnya2 = findViewById(R.id.lihatSelengkapnya2);
         iconCart = findViewById(R.id.iconCart);
