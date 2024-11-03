@@ -16,9 +16,6 @@
             android:name=".FormFaq"
             android:exported="false" />
         <activity
-            android:name=".FormFAQ"
-            android:exported="false" />
-        <activity
             android:name=".KategoriPembibitan"
             android:exported="false" />
         <activity
