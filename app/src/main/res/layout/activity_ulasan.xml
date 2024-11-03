@@ -10,13 +10,13 @@
     <!-- Background ImageView -->
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="413dp"
-        android:layout_height="819dp"
+        android:layout_width="396dp"
+        android:layout_height="833dp"
         app:srcCompat="@drawable/bg_ijo"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="159dp" />
+        android:layout_marginTop="95dp" />
 
     <!-- Back Button -->
     <ImageButton
@@ -29,8 +29,8 @@
         app:srcCompat="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
         android:contentDescription="Back Button"
         android:minHeight="48dp"
         android:minWidth="48dp" />
@@ -42,26 +42,26 @@
         android:layout_height="wrap_content"
         android:text="Ulasan Customer"
         android:textColor="@color/ijo"
-        android:fontFamily="@font/font"
-        android:textSize="22sp"
+        android:fontFamily="@font/readex_boldd"
+        android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@id/imageButton4"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="50dp" />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp" />
 
     <!-- Prompt Text -->
 
     <!-- Background for EditText (bg_ulasan) -->
     <TextView
         android:id="@+id/textView14"
-        android:layout_width="253dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="44dp"
+        android:layout_width="280dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="45dp"
         android:layout_marginTop="272dp"
-        android:fontFamily="@font/font"
+        android:fontFamily="@font/readex_boldd"
         android:text="Apa pendapat Anda tentang kami? Berikan ulasan Anda"
         android:textColor="@color/white"
-        android:textSize="16sp"
+        android:textSize="17sp"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
 
@@ -84,11 +84,12 @@
         android:layout_width="286dp"
         android:layout_height="78dp"
         android:hint="Beri Ulasan"
-        android:fontFamily="@font/font"
+        android:fontFamily="@font/readexpro_light"
         android:textColorHint="@color/black"
+        android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="@id/imageButton6"
         app:layout_constraintStart_toStartOf="@id/imageButton6"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="17dp"
         android:layout_marginTop="10dp" />
 
     <!-- Submit Button -->
@@ -98,7 +99,7 @@
         android:layout_height="48dp"
         android:text="Kirim Ulasan"
         android:backgroundTint="@color/yellow"
-        android:fontFamily="@font/font"
+        android:fontFamily="@font/readex_boldd"
         app:layout_constraintTop_toBottomOf="@id/imageButton6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
