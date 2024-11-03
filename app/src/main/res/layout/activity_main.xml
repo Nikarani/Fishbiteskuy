@@ -78,6 +78,20 @@
                 <!-- Search Bar -->
 
                 <!-- Section Kategori -->
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/searchbar"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginStart="17dp"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/gambar" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -87,7 +101,7 @@
                     android:textColor="@color/ijo"
                     android:textStyle="bold"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp" />
+                    android:layout_marginTop="17dp" />
 
                     <!-- Gambar Kategori 1 -->
                     <LinearLayout
@@ -279,30 +293,34 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Berita Terkini"
+                    android:text="Artikel"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:layout_marginStart="20dp"
                     android:textColor="@color/ijo"
                     android:fontFamily="@font/readex_boldd"
-                    android:layout_marginTop="24dp" />
+                    android:layout_marginTop="17dp" />
 
+                <!-- Section FAQ -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="8dp">
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
 
                     <!-- Berita 1 -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginStart="20dp">
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/bg_homeartikel"
+                        android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="120dp"
-                            android:layout_height="100dp"
+                            android:layout_height="80dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="15dp"
                             android:src="@drawable/berita1" />
 
                         <LinearLayout
@@ -315,21 +333,23 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:fontFamily="@font/readexpro_light"
                                 android:text="Petani ikan mulai beralih ke teknik ramah lingkungan, menarik!"
-                                android:textSize="13sp"
                                 android:textColor="@color/black"
-                                android:fontFamily="@font/readexpro_light"/>
+                                android:textSize="12sp" />
 
                             <Button
                                 android:id="@+id/lihatSelengkapnya1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="start"
+                                android:layout_marginStart="45dp"
                                 android:layout_marginTop="4dp"
                                 android:backgroundTint="@color/yellow"
                                 android:fontFamily="@font/readex_boldd"
                                 android:text="Lihat selengkapnya"
-                                android:textSize="12sp" />
+                                android:textSize="10sp" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -338,13 +358,16 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
+                        android:layout_marginStart="20dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginStart="20dp">
+                        android:background="@drawable/bg_homeartikel"
+                        android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="120dp"
                             android:layout_height="100dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
                             android:src="@drawable/berita2" />
 
                         <LinearLayout
@@ -357,28 +380,29 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
                                 android:fontFamily="@font/readexpro_light"
-                                android:textColor="@color/black"
                                 android:text="Teknologi baru dalam budidaya ikan meningkatkan hasil panen!"
-                                android:textSize="13sp" />
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
 
                             <Button
                                 android:id="@+id/lihatSelengkapnya2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Lihat selengkapnya"
-                                android:fontFamily="@font/readex_boldd"
-                                android:backgroundTint="@color/yellow"
-                                android:textSize="12sp"
                                 android:layout_gravity="start"
-                                android:layout_marginTop="4dp" />
+                                android:layout_marginStart="45dp"
+                                android:layout_marginTop="4dp"
+                                android:backgroundTint="@color/yellow"
+                                android:fontFamily="@font/readex_boldd"
+                                android:text="Lihat selengkapnya"
+                                android:textSize="10sp" />
                         </LinearLayout>
 
                     </LinearLayout>
 
                 </LinearLayout>
 
-                <!-- Section FAQ -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
