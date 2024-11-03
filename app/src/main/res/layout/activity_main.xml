@@ -44,12 +44,16 @@
                         android:layout_weight="1" />
 
                     <!-- Icon Keranjang & Profile -->
-                    <ImageView
+                    <ImageButton
                         android:id="@+id/iconCart"
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
                         android:src="@drawable/card"
-                        android:layout_marginEnd="8dp" />
+                        android:padding="8dp"
+                        android:scaleType="fitCenter"
+                        android:background="@android:color/transparent"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="Ikon keranjang belanja"/>
 
                     <ImageView
                         android:id="@+id/iconProfile"

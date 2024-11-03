@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Fishbiteskuy</string>
+    <string name="bibit_ikan_description">Gambar bibit ikan</string>
+    <string name="ikan_tawarku">Gambar ikan tawar</string>
 </resources>
