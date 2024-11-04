@@ -235,8 +235,22 @@
                 android:gravity="center"
                 android:text="Pembibitan Ikan"
                 android:textSize="10sp" />
+
         </LinearLayout>
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="250dp"
+        android:fontFamily="@font/readex_boldd"
+        android:text="Semua Produk"
+        android:textColor="@color/ijo"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -248,22 +262,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
-                android:layout_marginTop="230dp"
-                android:fontFamily="@font/readex_boldd"
-                android:text="Semua Produk"
-                android:textColor="@color/ijo"
-                android:textSize="18sp"
-                android:textStyle="bold" />
 
             <!--Produk card 1!-->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_marginTop="270dp">
 
                 <ImageButton
                     android:id="@+id/imageButton8"
@@ -685,7 +689,8 @@
                 <!-- produk card 8 !-->
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp">
 
                     <ImageButton
                         android:id="@+id/imageButton14"
