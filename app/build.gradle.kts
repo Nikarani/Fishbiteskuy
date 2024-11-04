@@ -10,7 +10,7 @@ android {
     namespace = "com.example.fishbiteskuy"
     defaultConfig {
         applicationId = "com.example.fishbiteskuy"
-        minSdk = 26
+        minSdk = 22
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -28,10 +28,15 @@ android {
             // Anda bisa menambahkan konfigurasi untuk build debug di sini jika diperlukan
         }
     }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }
 
 dependencies {
     // AndroidX Libraries
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
@@ -44,6 +49,7 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation(libs.ext.junit)
     implementation(libs.activity)
+    implementation(libs.core.ktx)
 
     // Dependency untuk unit testing
     testImplementation("junit:junit:4.13.2") // Menambahkan JUnit untuk unit testing

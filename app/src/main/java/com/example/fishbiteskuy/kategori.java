@@ -2,6 +2,9 @@ package com.example.fishbiteskuy;
 
 import android.os.Bundle;
 
+import retrofit2.Call;
+import retrofit2.http.GET;
+import java.util.List;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -9,8 +12,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class kategori extends AppCompatActivity {
-
+    @GET("produk")
     @Override
+//    Call<List<Produk>> getProduk();
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
@@ -21,4 +25,6 @@ public class kategori extends AppCompatActivity {
             return insets;
         });
     }
+
+
 }
