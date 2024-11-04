@@ -42,12 +42,12 @@
         android:id="@+id/imageButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:contentDescription="bg keranjang"
+        android:layout_marginTop="110dp"
         android:background="@android:color/transparent"
+        android:contentDescription="bg keranjang"
         app:layout_constraintBottom_toBottomOf="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.429"
+        app:layout_constraintHorizontal_bias="0.246"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5"
@@ -134,6 +134,14 @@
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView18" />
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_delete"
+        tools:layout_editor_absoluteX="347dp"
+        tools:layout_editor_absoluteY="134dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
