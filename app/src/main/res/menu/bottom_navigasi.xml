@@ -6,10 +6,6 @@
         android:icon="@drawable/button_home"
         android:title="Home" /> <!-- Tambahkan title -->
 
-    <item
-        android:id="@+id/navigation_katalog"
-        android:icon="@drawable/katalog"
-        android:title="Katalog" /> <!-- Tambahkan title -->
 
     <item
         android:id="@+id/navigation_artikel"

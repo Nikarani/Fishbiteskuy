@@ -147,7 +147,9 @@
         android:background="@drawable/bginput_editprofile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        android:id="@+id/editText4"
+        tools:ignore="DuplicateIds" />
 
     <FrameLayout
         android:layout_width="wrap_content"
