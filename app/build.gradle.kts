@@ -50,6 +50,7 @@ dependencies {
     implementation(libs.ext.junit)
     implementation(libs.activity)
     implementation(libs.core.ktx)
+    implementation(libs.retrofit)
 
     // Dependency untuk unit testing
     testImplementation("junit:junit:4.13.2") // Menambahkan JUnit untuk unit testing

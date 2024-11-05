@@ -5,49 +5,55 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SignupActivity extends AppCompatActivity {
+        private EditText usernameEditText, passwordEditText;
+        private Button signUpButton;
+        private DBDataSource dataSource;
 
-    private EditText usernameEditText;
-    private EditText emailEditText;
-    private EditText passwordEditText;
-    private Button signUpButton;
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_signup);
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
+            dataSource = new DBDataSource(this);
+            dataSource.open();
 
-        // Inisialisasi EditText dan Button
-        usernameEditText = findViewById(R.id.username);
-        emailEditText = findViewById(R.id.email);
-        passwordEditText = findViewById(R.id.password);
-        signUpButton = findViewById(R.id.signupButton);
+            usernameEditText = findViewById(R.id.username);
+            passwordEditText = findViewById(R.id.password);
+            signUpButton = findViewById(R.id.signupButton);
 
-        // Menangani klik pada tombol Sign Up
-        signUpButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String username = usernameEditText.getText().toString();
-                String email = emailEditText.getText().toString();
-                String password = passwordEditText.getText().toString();
+            signUpButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String username = usernameEditText.getText().toString().trim();
+                    String password = passwordEditText.getText().toString().trim();
 
-                // Validasi input
-                if (username.isEmpty() || email.isEmpty() || password.isEmpty()) {
-                    Toast.makeText(SignupActivity.this, "Semua field harus diisi", Toast.LENGTH_SHORT).show();
-                } else {
-                    // Lakukan proses sign up (misalnya menyimpan data ke database)
-                    // Ini hanya contoh, sesuaikan dengan logika Anda
-                    Toast.makeText(SignupActivity.this, "Akun berhasil dibuat", Toast.LENGTH_SHORT).show();
-
-                    // Pindah ke LoginActivity
-                    Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
-                    startActivity(intent);
-                    finish(); // Menutup SignupActivity
+                    if (username.isEmpty() || password.isEmpty()) {
+                        Toast.makeText(SignupActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+                    } else {
+                        boolean isRegistered = dataSource.registerUser(username, password);
+                        if (isRegistered) {
+                            Toast.makeText(SignupActivity.this, "Registration successful! Please login.", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+                            startActivity(intent);
+                            finish();
+                        } else {
+                            Toast.makeText(SignupActivity.this, "Registration failed. Username may already exist.", Toast.LENGTH_SHORT).show();
+                        }
+                    }
                 }
-            }
-        });
+            });
+
+        }
+
+        @Override
+        protected void onDestroy() {
+            dataSource.close();
+            super.onDestroy();
+        }
     }
-}
+
